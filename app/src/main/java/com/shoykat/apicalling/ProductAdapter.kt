@@ -27,12 +27,16 @@ class ProductAdapter :
 
 
     inner class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val titleTextView: TextView = itemView.findViewById(R.id.textViewTitle)
-        private val priceTextView: TextView = itemView.findViewById(R.id.textViewPrice)
+       // private val titleTextView: TextView = itemView.findViewById(R.id.showTitle)
+        private val priceTextView: TextView = itemView.findViewById(R.id.showPrice)
+       // private val detailsTextView: TextView = itemView.findViewById(R.id.showDetails)
+        private val categoryTextView: TextView = itemView.findViewById(R.id.showcategory)
 
         fun bind(product: ProductItem) {
-            titleTextView.text = product.title.toString()
+            //titleTextView.text = product.title.toString()
             priceTextView.text = product.price.toString()
+            //detailsTextView.text = product.description .toString()
+            categoryTextView.text = product.category .toString()
         }
     }
 }

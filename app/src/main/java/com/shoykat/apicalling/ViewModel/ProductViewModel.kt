@@ -17,8 +17,6 @@ class ProductViewModel(val productrepository: ProductRepository) :ViewModel(){
            productrepository.getProduct()
        }
    }
-    //val products: LiveData<List<ProductItem>> = productRepository.getProducts()
-    // val products :LiveData<<List<ProductItem>>
     val products: LiveData<List<ProductItem>>
      get() = productrepository.products
 }

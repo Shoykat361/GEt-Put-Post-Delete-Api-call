@@ -11,10 +11,6 @@ class ProductRepository(val apiInterface: ApiInterface) {
     private val productLiveData = MutableLiveData<List<ProductItem>>()
     val products : LiveData<List<ProductItem>>
     get() = productLiveData
-
-    /*suspend fun getProduct(): Response<Product>{
-        return apiInterface.getProduct()
-    }*/
     suspend fun getProduct(){
         val result = apiInterface.getProduct()
         if (result.body()!=null){

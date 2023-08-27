@@ -8,10 +8,14 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface ApiInterface {
     @GET("products")
      suspend fun getProduct():Response<List<ProductItem>>
 
+    /*@GET("products/{id}")
+    suspend fun getProduct(@Path("id") id: Int): Response<List<ProductItem>>
+*/
 
 }
