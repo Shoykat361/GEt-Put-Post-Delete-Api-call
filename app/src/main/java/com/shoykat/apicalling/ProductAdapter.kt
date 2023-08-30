@@ -1,9 +1,11 @@
 package com.shoykat.apicalling
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -20,7 +22,11 @@ class ProductAdapter :
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = getItem(position)
+        val context = holder.itemView.context
         holder.bind(product)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context, "Item clicked: ${product.price}", Toast.LENGTH_SHORT).show()
+        }
     }
 
 
