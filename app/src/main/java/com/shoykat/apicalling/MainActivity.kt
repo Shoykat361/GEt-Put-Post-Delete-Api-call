@@ -19,14 +19,14 @@ import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var productViewModel: ProductViewModel
+    /*private lateinit var productViewModel: ProductViewModel
     private lateinit var recyclerView: RecyclerView
-    private lateinit var productAdapter: ProductAdapter
+    private lateinit var productAdapter: ProductAdapter*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val apiInterface =Retrofithelper.getProductInstance().create(ApiInterface::class.java)
+       /* val apiInterface =Retrofithelper.getProductInstance().create(ApiInterface::class.java)
         val productRepository=ProductRepository(apiInterface)
         //productViewModel=ViewModelProvider(this,ProductViewModelFactory(productRepository)).get(ProductViewModel)
         productViewModel = ViewModelProvider(this, ProductViewModelFactory(productRepository))
@@ -43,6 +43,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
+*/
     }
 }
